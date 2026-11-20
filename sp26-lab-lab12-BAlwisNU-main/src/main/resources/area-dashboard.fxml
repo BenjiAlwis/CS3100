@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sceneitall.controller.AreaDashboardController"
+            stylesheets="@styles.css">
+  <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+
+  <!-- Top: Area name title -->
+  <top>
+    <Label fx:id="areaNameLabel"
+           styleClass="title-label"
+           text="Area Name"
+           accessibleText="Area name"/>
+  </top>
+
+  <!-- Center: Device list and brightness slider -->
+  <center>
+    <VBox spacing="12">
+      <padding><Insets top="12"/></padding>
+
+      <Label text="Devices" styleClass="label"/>
+      <ListView fx:id="deviceListView"
+                prefHeight="180"
+                accessibleText="Device list"/>
+
+      <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Brightness:" styleClass="label"/>
+        <Slider fx:id="brightnessSlider"
+                prefWidth="200"
+                accessibleText="Light brightness"/>
+        <Label fx:id="brightnessValueLabel"
+               text="100%"
+               styleClass="label"/>
+      </HBox>
+    </VBox>
+  </center>
+
+  <!-- Bottom: Scene selection and action -->
+  <bottom>
+    <VBox spacing="10">
+      <padding><Insets top="12"/></padding>
+
+      <HBox spacing="10" alignment="CENTER_LEFT">
+        <ComboBox fx:id="sceneComboBox"
+                  promptText="Choose a scene..."
+                  accessibleText="Select scene"/>
+        <Button fx:id="activateButton"
+                text="Activate Scene"
+                onAction="#handleActivateScene"
+                accessibleText="Activate scene"/>
+      </HBox>
+
+      <Label fx:id="statusLabel"
+             styleClass="status-label"
+             text=""
+             accessibleText="Status message"/>
+    </VBox>
+  </bottom>
+</BorderPane>

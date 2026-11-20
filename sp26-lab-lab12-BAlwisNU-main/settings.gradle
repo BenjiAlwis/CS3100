@@ -1,0 +1,10 @@
+/*
+ * Settings file for CS 3100 Lab 12.
+ */
+
+plugins {
+    // Apply the foojay-resolver plugin to allow automatic download of JDKs
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
+
+rootProject.name = 'lab12-sceneitall'
