@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN" "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Controllers are instantiated reflectively by FXMLLoader and cannot be final -->
+    <suppress checks="FinalClass" files=".*Controller\.java$"/>
+    <!-- Application subclass is instantiated reflectively by JavaFX launcher -->
+    <suppress checks="FinalClass" files="SceneItAllApp\.java$"/>
+    <suppress checks="HideUtilityClassConstructor" files="SceneItAllApp\.java$"/>
+</suppressions>
