@@ -1,0 +1,9 @@
+{
+  "devices": {
+    "porch-camera": { "type": "CAMERA", "failureMode": "TIMEOUT" },
+    "living-room-thermostat": { "type": "THERMOSTAT", "failureMode": "NONE" },
+    "front-door-lock": { "type": "LOCK", "failureMode": "UNREACHABLE" },
+    "living-room-light": { "type": "DIMMABLE", "failureMode": "INTERMITTENT" },
+    "thermostat-main": { "type": "THERMOSTAT", "failureMode": "PARTIAL" }
+  }
+}

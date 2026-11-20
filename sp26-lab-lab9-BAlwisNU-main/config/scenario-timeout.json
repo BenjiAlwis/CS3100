@@ -1,0 +1,7 @@
+{
+  "devices": {
+    "porch-camera": { "type": "CAMERA", "failureMode": "TIMEOUT" },
+    "living-room-thermostat": { "type": "THERMOSTAT", "failureMode": "NONE" },
+    "front-door-lock": { "type": "LOCK", "failureMode": "NONE" }
+  }
+}
