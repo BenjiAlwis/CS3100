@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Suppress HideUtilityClassConstructor for test files -->
+    <suppress checks="HideUtilityClassConstructor" files=".*[\\/]test[\\/].*\.java$"/>
+    <!-- Suppress MethodName for test methods (JUnit often uses underscore naming) -->
+    <suppress checks="MethodName" files=".*[\\/]test[\\/].*\.java$"/>
+    <!-- Main has main() as entry point, not a utility class -->
+    <suppress checks="HideUtilityClassConstructor" files=".*Main\.java$"/>
+</suppressions>
